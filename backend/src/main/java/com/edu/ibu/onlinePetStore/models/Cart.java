@@ -16,6 +16,7 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column
     private boolean isEmpty;
 
     @OneToOne(fetch = FetchType.LAZY)

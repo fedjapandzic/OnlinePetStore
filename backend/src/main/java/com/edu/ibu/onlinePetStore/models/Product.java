@@ -16,10 +16,13 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long products_id;
 
+    @Column
     private String name;
 
+    @Column
     private String desc;
 
+    @Column
     private int price;
 
     @ManyToOne(fetch = FetchType.LAZY)
