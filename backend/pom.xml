@@ -11,7 +11,7 @@
 	<groupId>com.edu.ibu</groupId>
 	<artifactId>onlinePetStore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Online Pet Store</name>
+	<name>online-pet-store</name>
 	<description>Project for Software Engineering course</description>
 	<properties>
 		<java.version>17</java.version>
