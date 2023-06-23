@@ -27,8 +27,8 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Product> getProductById(@PathVariable("id") int id){
-        Optional<Product> product = productService.getProduct(id);
+    public Product getProductById(@PathVariable("id") int id){
+        Product product = productService.getProduct(id);
         if (product == null){
             throw new ProductNotFoundException("Product not found with ID: " + id);
         }

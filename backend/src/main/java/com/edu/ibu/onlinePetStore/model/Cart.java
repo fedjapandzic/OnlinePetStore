@@ -16,6 +16,10 @@ public class Cart {
 
     public Cart() {
     }
+    public Cart(Product product, User user) {
+        this.product = product;
+        this.user = user;
+    }
 
     public int getId() {
         return id;

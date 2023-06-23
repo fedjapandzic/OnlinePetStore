@@ -23,7 +23,7 @@ public class ProductServiceImpl implements ProductService{
         return productRepository.findAll();
     }
 
-    public Optional<Product> getProduct(int id) {
+    public Product getProduct(int id) {
         return productRepository.findById(id);
     }
 }

@@ -3,11 +3,13 @@ package com.edu.ibu.onlinePetStore.controller;
 import com.edu.ibu.onlinePetStore.exception.CartNotFoundException;
 import com.edu.ibu.onlinePetStore.exception.UserNotFoundException;
 import com.edu.ibu.onlinePetStore.model.Cart;
+import com.edu.ibu.onlinePetStore.model.Product;
 import com.edu.ibu.onlinePetStore.model.User;
 import com.edu.ibu.onlinePetStore.service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -29,5 +31,10 @@ public class CartController {
             throw new CartNotFoundException("Cart not found with ID: " + id);
         }
         return cart;
+    }
+
+    @GetMapping("/getByUser/{userId}")
+    public List<Product> getProductsInUserCarts(@PathVariable("userId") int userId) {
+        return cartService.getProductsInUserCarts(userId);
     }
 }

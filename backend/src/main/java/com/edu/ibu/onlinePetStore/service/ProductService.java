@@ -8,5 +8,5 @@ import java.util.Optional;
 public interface ProductService {
     public Product saveProduct(Product product);
     public List<Product> getAllProducts();
-    public Optional<Product> getProduct(int id);
+    public Product getProduct(int id);
 }
