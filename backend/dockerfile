@@ -16,9 +16,6 @@ COPY src ./src
 # Build the application
 RUN mvn package -DskipTests
 
-# Use a smaller base image for the final image
-FROM adoptopenjdk:17-jre-hotspot
-
 # Set the working directory inside the container
 WORKDIR /app
 
